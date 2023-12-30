@@ -1,0 +1,26 @@
+:root {
+  /*background color*/
+  --background-ppui: #a43333;
+  --background-primary: #fff;
+  --background-secondary: #f9f9f9;
+  --background-tertiary: #f9f9eb;
+
+  --background-hover-primary: #eeeff1;
+
+  /*text color*/
+  --text-primary: #51596a;
+  --text-secondary: #343c4b;
+
+  /*border color*/
+  --border-primary: #dddfe2;
+
+  /*banner color*/
+  --banner-primary: #dceaef;
+  --banner-secondary: #ece7db;
+  --banner-tertiary: #eee3f3;
+
+  /*button color*/
+  --button-ppui: #a43333;
+  --button-primary: #35a474;
+  --button-secondary: #b5b5b5;
+}

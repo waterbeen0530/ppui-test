@@ -1,1 +1,1 @@
-export { default as defaultLogo } from "assets/imgs/defaultLogo.png";
+export { default as defaultLogo } from "assets/imgs/logo.png";

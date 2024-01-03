@@ -1,7 +1,7 @@
 import "styles/colorTheme.css";
 import styled from "@emotion/styled";
-import { defaultLogo } from "assets/imgs";
 import { useState } from "react";
+import { defaultLogo } from "assets/imgs";
 
 export default function Header() {
   const [language, setLanguage] = useState(true);

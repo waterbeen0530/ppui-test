@@ -1,4 +1,6 @@
 import styled from "@emotion/styled";
+import { RadioData } from "docs/main/radio";
+import { radioTypes } from "utils/interfaces/main/radio";
 
 export default function Question() {
   return (
@@ -8,9 +10,11 @@ export default function Question() {
         <ChoiceBox>
           <Consent>동의</Consent>
           <RadioBox>
-            <RadioWrapper>
-              <RadioItem type="radio" />
-            </RadioWrapper>
+            {RadioData.map((arr, i) => (
+              <RadioWrapper key={i} size={arr.size} color={arr.color}>
+                <RadioItem type="radio" />
+              </RadioWrapper>
+            ))}
           </RadioBox>
           <Disagree>비동의</Disagree>
         </ChoiceBox>
@@ -45,7 +49,6 @@ const Statement = styled.p`
 `;
 
 const ChoiceBox = styled.div`
-  width: 600px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -67,8 +70,25 @@ const Disagree = styled(Text)`
 
 const RadioBox = styled.div`
   margin: 0 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
 `;
 
-const RadioWrapper = styled.label``;
+const RadioWrapper = styled.label<radioTypes>`
+  width: ${(props) => props.size}px;
+  height: ${(props) => props.size}px;
+  border: 2.5px solid var(${(props) => props.color});
+  border-radius: 50%;
+  transition: 0.3s;
 
-const RadioItem = styled.input``;
+  &:hover {
+    background-color: var(${(props) => props.color});
+    cursor: pointer;
+  }
+`;
+
+const RadioItem = styled.input`
+  appearance: none;
+`;
